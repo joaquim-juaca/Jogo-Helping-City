@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b277y43c07wcp"]
+
+[ext_resource type="Texture2D" uid="uid://c20hgpwus575b" path="res://logo.jpg" id="1_fgkus"]
+[ext_resource type="Script" uid="uid://d38wdv6ihml6h" path="res://scipts/title_screen.gd" id="1_s4lrb"]
+[ext_resource type="Texture2D" uid="uid://bvtptss6ik74r" path="res://72eb903ee884f7c03d7fadd74616a457.jpg" id="1_sa3yf"]
+
+[node name="TitleScreen" type="Control" unique_id=1462370575]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s4lrb")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1407275433]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 961.0
+offset_bottom = 480.0
+texture = ExtResource("1_sa3yf")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=719247958]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1505999606]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=839258416]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Logo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=352032917]
+layout_mode = 2
+texture = ExtResource("1_fgkus")
+
+[node name="começar" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=769512911]
+layout_mode = 2
+text = "Começar
+"
+
+[node name="sair" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=550900617]
+layout_mode = 2
+text = "Sair
+"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/começar" to="." method="_on_começar_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/sair" to="." method="_on_sair_pressed"]

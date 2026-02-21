@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dtg7stcrlhauk"]
+
+[ext_resource type="Script" uid="uid://bcbwdp2iiptgu" path="res://scipts/mapa_teste.gd" id="1_enq2i"]
+[ext_resource type="Texture2D" uid="uid://cjyposojiwc5a" path="res://sprites/mapa.png" id="2_enq2i"]
+
+[node name="Node2D" type="Node2D" unique_id=1431591113]
+script = ExtResource("1_enq2i")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=877640914]
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D" unique_id=671726746]
+position = Vector2(-19.87685, 73.54842)
+scale = Vector2(2.8376253, 2.392962)
+color = Color(0.1882353, 0.16862746, 1, 1)
+polygon = PackedVector2Array(66.259, -100.941, 66.209175, -221.29411, 266.37656, -221.29411, 269.19583, -97.59805)
+uv = PackedVector2Array(66.259, -100.941, 66.209175, -221.29411, 266.37656, -221.29411, 269.19583, -97.59805)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2055408174]
+position = Vector2(-19.87685, 73.54842)
+scale = Vector2(2.8376253, 2.392962)
+polygon = PackedVector2Array(66.259, -100.941, 54.932, -221.294, 266.377, -221.294, 269.196, -97.598)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1347860311]
+position = Vector2(4.2915344e-06, -7.6293945e-06)
+scale = Vector2(0.99999994, 0.9925926)
+texture = ExtResource("2_enq2i")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=989050628]
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

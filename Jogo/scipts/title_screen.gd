@@ -7,12 +7,16 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+	
 
 
-func _on_começar_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Mapa.tscn"S)
+func _on_jogar_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/MapaTeste.tscn")	
+
+func _on_creditos_button_up() -> void:
+	pass # Replace with function body.
+
 
 func _on_sair_pressed() -> void:
 	get_tree().quit()

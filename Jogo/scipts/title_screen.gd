@@ -20,3 +20,7 @@ func _on_creditos_button_up() -> void:
 
 func _on_sair_pressed() -> void:
 	get_tree().quit()
+
+func ready() -> void:
+	$sons/inicial.mp3.play()
+	

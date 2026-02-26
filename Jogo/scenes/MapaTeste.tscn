@@ -1,31 +1,81 @@
 [gd_scene format=3 uid="uid://dtg7stcrlhauk"]
 
 [ext_resource type="Script" uid="uid://bcbwdp2iiptgu" path="res://scipts/mapa_teste.gd" id="1_enq2i"]
-[ext_resource type="Texture2D" uid="uid://cjyposojiwc5a" path="res://sprites/mapa.png" id="2_enq2i"]
+[ext_resource type="Texture2D" uid="uid://da26e2ppe0q41" path="res://sprites/223 Sem Título_20260225231921.png" id="2_3rhw8"]
+[ext_resource type="AudioStream" uid="uid://bppy0jxias7ur" path="res://sons/mapa.mp3" id="3_3rhw8"]
 
 [node name="Node2D" type="Node2D" unique_id=1431591113]
 script = ExtResource("1_enq2i")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=877640914]
+[node name="Area2D4" type="Area2D" parent="." unique_id=783420491]
 
-[node name="Polygon2D" type="Polygon2D" parent="Area2D" unique_id=671726746]
+[node name="hospital" type="Polygon2D" parent="Area2D4" unique_id=841326802]
+position = Vector2(-132.13326, 82.51029)
+scale = Vector2(2.0493963, 2.3059452)
+color = Color(0.1882353, 0.16862746, 1, 1)
+polygon = PackedVector2Array(-181.45184, -257.8163, -181.45184, -198.83835, -115.09084, -195.36905, -118.99444, -143.32965, -388.34204, -146.79893, -388.34204, -219.6541, -318.07745, -219.6541, -318.07745, -261.2856)
+uv = PackedVector2Array(66.259, -100.941, 66.209175, -221.29411, 266.37656, -221.29411, 269.19583, -97.59805)
+
+[node name="hospital2" type="CollisionPolygon2D" parent="Area2D4" unique_id=108806353]
+position = Vector2(-19.87685, 73.54842)
+scale = Vector2(2.8376253, 2.392962)
+polygon = PackedVector2Array(-173.42783, -244.69609, -173.42783, -191.20589, -125.50043, -187.86276, -125.50043, -137.7157, -317.21002, -141.05884, -320.02927, -207.92159, -269.28262, -204.57845, -272.10187, -244.69609)
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=1236102969]
+
+[node name="escola" type="Polygon2D" parent="Area2D3" unique_id=1809736463]
+position = Vector2(-132.13326, 82.51029)
+scale = Vector2(2.0493963, 2.3059452)
+color = Color(0.1882353, 0.16862746, 1, 1)
+polygon = PackedVector2Array(-193.16263, -84.351654, -193.16263, -8.0272045, -150.22314, -8.0272045, -150.87375, 99.64705, -353.20975, 96.05159, -353.20975, -8.0272045, -302.4631, -8.0272045, -298.5595, -84.351654)
+uv = PackedVector2Array(66.259, -100.941, 66.209175, -221.29411, 266.37656, -221.29411, 269.19583, -97.59805)
+
+[node name="escola2" type="CollisionPolygon2D" parent="Area2D3" unique_id=2118446551]
+position = Vector2(-19.87685, 73.54842)
+scale = Vector2(2.8376253, 2.392962)
+polygon = PackedVector2Array(-181.8856, -74.19609, -184.70486, -0.64707375, -150.87375, -0.64707375, -153.69301, 92.96077, -289.01743, 89.61763, -289.01743, -3.9902115, -255.18633, -3.9902115, -252.36708, -77.53923)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=573872040]
+
+[node name="casas" type="Polygon2D" parent="Area2D2" unique_id=402911691]
 position = Vector2(-19.87685, 73.54842)
 scale = Vector2(2.8376253, 2.392962)
 color = Color(0.1882353, 0.16862746, 1, 1)
-polygon = PackedVector2Array(66.259, -100.941, 66.209175, -221.29411, 266.37656, -221.29411, 269.19583, -97.59805)
+polygon = PackedVector2Array(94.40177, 166.5098, 97.22103, 72.90195, 345.31583, 69.55881, 345.31583, 166.5098)
 uv = PackedVector2Array(66.259, -100.941, 66.209175, -221.29411, 266.37656, -221.29411, 269.19583, -97.59805)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2055408174]
+[node name="casas2" type="CollisionPolygon2D" parent="Area2D2" unique_id=346986808]
 position = Vector2(-19.87685, 73.54842)
 scale = Vector2(2.8376253, 2.392962)
-polygon = PackedVector2Array(66.259, -100.941, 54.932, -221.294, 266.377, -221.294, 269.196, -97.598)
+polygon = PackedVector2Array(94.402, 166.51, 97.221, 72.902, 345.316, 69.559, 345.316, 166.51)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=877640914]
+
+[node name="centro" type="Polygon2D" parent="Area2D" unique_id=671726746]
+position = Vector2(-19.87685, 73.54842)
+scale = Vector2(2.8376253, 2.392962)
+color = Color(0.1882353, 0.16862746, 1, 1)
+polygon = PackedVector2Array(131.05214, -100.94119, 133.8714, -234.66667, 311.4847, -231.32355, 305.84622, -100.94119)
+uv = PackedVector2Array(66.259, -100.941, 66.209175, -221.29411, 266.37656, -221.29411, 269.19583, -97.59805)
+
+[node name="centro2" type="CollisionPolygon2D" parent="Area2D" unique_id=2055408174]
+position = Vector2(-19.87685, 73.54842)
+scale = Vector2(2.8376253, 2.392962)
+polygon = PackedVector2Array(131.052, -100.941, 133.871, -234.667, 311.485, -231.324, 305.846, -100.941)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1347860311]
-position = Vector2(4.2915344e-06, -7.6293945e-06)
-scale = Vector2(0.99999994, 0.9925926)
-texture = ExtResource("2_enq2i")
+position = Vector2(4.2915344e-06, -4.5000005)
+scale = Vector2(0.99999994, 1.000926)
+texture = ExtResource("2_3rhw8")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=989050628]
 
+[node name="musica" type="AudioStreamPlayer2D" parent="." unique_id=515460925]
+stream = ExtResource("3_3rhw8")
+autoplay = true
+
+[connection signal="input_event" from="Area2D4" to="." method="_on_area_2d_4_input_event"]
+[connection signal="input_event" from="Area2D3" to="." method="_on_area_2d_3_input_event"]
+[connection signal="input_event" from="Area2D2" to="." method="_on_area_2d_2_input_event"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

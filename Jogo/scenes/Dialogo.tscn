@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bcytkjp4jci52"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s3sii"]
+line_spacing = 0.0
+font_size = 48
+shadow_color = Color(0, 0, 0, 0.6)
+
+[node name="Control" type="Control" unique_id=36461855]
+custom_minimum_size = Vector2(1280, 320)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -100.0
+offset_right = 160.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
+[node name="Background" type="ColorRect" parent="." unique_id=320313124]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Hcontainer" type="HBoxContainer" parent="Background" unique_id=1107412846]
+custom_minimum_size = Vector2(1248, 288)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -624.0
+offset_top = -144.0
+offset_right = 624.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Border" type="ColorRect" parent="Background/Hcontainer" unique_id=1872203150]
+custom_minimum_size = Vector2(288, 0)
+layout_mode = 2
+
+[node name="Faceset" type="TextureRect" parent="Background/Hcontainer/Border" unique_id=782738678]
+custom_minimum_size = Vector2(280, 288)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -144.0
+offset_right = 140.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Vcontainer" type="VBoxContainer" parent="Background/Hcontainer" unique_id=424044856]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="Background/Hcontainer/Vcontainer" unique_id=2136589128]
+layout_mode = 2
+text = "Prefeito"
+label_settings = SubResource("LabelSettings_s3sii")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Dialog" type="RichTextLabel" parent="Background/Hcontainer/Vcontainer" unique_id=1887363676]
+layout_mode = 2
+size_flags_vertical = 3

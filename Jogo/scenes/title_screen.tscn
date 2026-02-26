@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cyhgsn66a7q1b" path="res://sprites/209 Sem Título_20260208215521.png" id="4_dc4i4"]
 [ext_resource type="Texture2D" uid="uid://bx2f4jymofdeh" path="res://sprites/209 Sem Título_20260208215505.png" id="5_3yumr"]
 [ext_resource type="Texture2D" uid="uid://b1pjh5mk8ss77" path="res://sprites/209 Sem Título_20260208215454.png" id="5_e54dn"]
+[ext_resource type="AudioStream" uid="uid://bxyjwtpmri26e" path="res://sons/inicial.mp3" id="7_3yumr"]
 
 [node name="TitleScreen" type="Control" unique_id=1462370575]
 layout_mode = 3
@@ -92,6 +93,10 @@ grow_vertical = 2
 position = Vector2(218.99997, 65.99999)
 scale = Vector2(2.0803573, 1.5870969)
 texture = ExtResource("5_e54dn")
+
+[node name="musica" type="AudioStreamPlayer2D" parent="." unique_id=503949326]
+stream = ExtResource("7_3yumr")
+autoplay = true
 
 [connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="button_up" from="Creditos" to="." method="_on_creditos_button_up"]

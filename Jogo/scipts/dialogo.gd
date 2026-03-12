@@ -45,19 +45,22 @@ func _process(_delta: float) -> void:
 			_is_typing = false
 			return
 
-		_id += 1
-
+# se o diálogo atual é final
 		if data[_id].has("end"):
 			queue_free()
 			return
 
+		# avança para o próximo
 		_id += 1
 
-		if _id >= data.size():
+		# se não existir próximo diálogo
+		if not data.has(_id):
 			queue_free()
 			return
 
 		_initialize_dialog()
+
+
 
 func _initialize_dialog() -> void:
 	if not data.has(_id):

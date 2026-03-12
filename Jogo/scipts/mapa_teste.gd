@@ -1,6 +1,7 @@
 extends Node2D
 class_name mapa
 
+
 var dialog_ja_exibido := false
 var _dialog_instance : DialogScreen = null
 const _DIALOG_SCREEN :PackedScene = preload("res://scenes/Dialogo.tscn")

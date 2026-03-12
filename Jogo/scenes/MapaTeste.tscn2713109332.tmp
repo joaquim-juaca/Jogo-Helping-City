@@ -3,14 +3,9 @@
 [ext_resource type="Script" uid="uid://bcbwdp2iiptgu" path="res://scipts/mapa_teste.gd" id="1_enq2i"]
 [ext_resource type="Texture2D" uid="uid://da26e2ppe0q41" path="res://sprites/223 Sem Título_20260225231921.png" id="2_3rhw8"]
 [ext_resource type="AudioStream" uid="uid://bppy0jxias7ur" path="res://sons/mapa.mp3" id="3_3rhw8"]
-[ext_resource type="Texture2D" uid="uid://dh8khmw2k3hs7" path="res://sprites/234 Sem Título_20260312081856.png" id="4_yyukr"]
-[ext_resource type="Texture2D" uid="uid://dkk5wmp6gxbtb" path="res://sprites/234 Sem Título_20260312081911.png" id="5_p3pxy"]
-[ext_resource type="Texture2D" uid="uid://dxwyducmm0bsy" path="res://sprites/234 Sem Título_20260312081906.png" id="6_juegu"]
-[ext_resource type="Texture2D" uid="uid://d3bx1fwco6r12" path="res://sprites/234 Sem Título_20260312081901.png" id="7_lasn7"]
 
-[node name="Node2D" type="Node2D" unique_id=1431591113 node_paths=PackedStringArray("_hud")]
+[node name="Node2D" type="Node2D" unique_id=1431591113]
 script = ExtResource("1_enq2i")
-_hud = NodePath("HUD")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=294290377]
 
@@ -80,38 +75,6 @@ texture = ExtResource("2_3rhw8")
 [node name="musica" type="AudioStreamPlayer2D" parent="." unique_id=515460925]
 stream = ExtResource("3_3rhw8")
 autoplay = true
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1845184872]
-offset_left = 144.0
-offset_top = 384.0
-offset_right = 288.0
-offset_bottom = 528.0
-texture = ExtResource("4_yyukr")
-expand_mode = 1
-
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=100117755]
-offset_left = -336.0
-offset_top = -384.0
-offset_right = -192.0
-offset_bottom = -240.0
-texture = ExtResource("5_p3pxy")
-expand_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="." unique_id=1890006605]
-offset_left = -968.0
-offset_top = 176.0
-offset_right = -824.0
-offset_bottom = 320.0
-texture = ExtResource("6_juegu")
-expand_mode = 1
-
-[node name="TextureRect4" type="TextureRect" parent="." unique_id=84713696]
-offset_left = 840.0
-offset_top = -320.0
-offset_right = 984.0
-offset_bottom = -176.0
-texture = ExtResource("7_lasn7")
-expand_mode = 1
 
 [connection signal="input_event" from="Area2D4" to="." method="_on_area_2d_4_input_event"]
 [connection signal="input_event" from="Area2D3" to="." method="_on_area_2d_3_input_event"]

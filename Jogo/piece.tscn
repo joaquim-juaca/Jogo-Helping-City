@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://76f8hvu0a6qi"]
+
+[ext_resource type="Script" uid="uid://cm862wvwdawuj" path="res://scipts/piece.gd" id="1_3makh"]
+
+[node name="Piece" type="Node2D" unique_id=1422327186]
+script = ExtResource("1_3makh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=409060775]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1825058968]
+position = Vector2(272.00003, 112)
+scale = Vector2(1.0098684, 1.2589285)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1076788631]
+scale = Vector2(0.99999994, 1)
+polygon = PackedVector2Array(47.530914, 12.709221, 47.530914, 114.38298, 174.28009, 114.38298, 174.28012, 12.709221)

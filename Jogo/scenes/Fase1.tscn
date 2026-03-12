@@ -1,3 +1,24 @@
 [gd_scene format=3 uid="uid://bckvnkkq6hwtg"]
 
-[node name="Node2D" type="Node2D" unique_id=858758829]
+[ext_resource type="Script" uid="uid://dc4q6o53ixrj2" path="res://scipts/fase_1.gd" id="1_buqwf"]
+[ext_resource type="Texture2D" uid="uid://617wle12pvtf" path="res://sprites/233 Sem Título_20260312083903.png" id="2_i2mi1"]
+[ext_resource type="Texture2D" uid="uid://bvtptss6ik74r" path="res://72eb903ee884f7c03d7fadd74616a457.jpg" id="3_i2mi1"]
+
+[node name="Puzzle" type="Node2D" unique_id=858758829]
+script = ExtResource("1_buqwf")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1781906551]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_i2mi1")
+
+[node name="Pieces" type="Node2D" parent="." unique_id=2112049160]
+
+[node name="Board" type="Node2D" parent="." unique_id=490139272]
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1147738829]
+offset_left = 560.0
+offset_top = 288.0
+offset_right = 1296.0
+offset_bottom = 816.0
+texture = ExtResource("3_i2mi1")

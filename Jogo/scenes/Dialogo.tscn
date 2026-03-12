@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://bcytkjp4jci52"]
 
+[ext_resource type="Script" uid="uid://dmvotkf7qjoy8" path="res://scenes/dialogo.gd" id="1_67w0c"]
+[ext_resource type="FontFile" uid="uid://c4kfjnarcy864" path="res://fonts/equipment-pro-v1.1/EquipmentPro.ttf" id="2_vyewl"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_s3sii"]
 line_spacing = 0.0
-font_size = 48
+font = ExtResource("2_vyewl")
+font_size = 63
 shadow_color = Color(0, 0, 0, 0.6)
+shadow_offset = Vector2(4, 4)
 
-[node name="Control" type="Control" unique_id=36461855]
+[node name="Control" type="Control" unique_id=36461855 node_paths=PackedStringArray("_name", "_dialog", "_faceset")]
 custom_minimum_size = Vector2(1280, 320)
 layout_mode = 3
 anchors_preset = 7
@@ -20,6 +25,10 @@ offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
+script = ExtResource("1_67w0c")
+_name = NodePath("Background/Hcontainer/Vcontainer/Name")
+_dialog = NodePath("Background/Hcontainer/Vcontainer/Dialog")
+_faceset = NodePath("Background/Hcontainer/Border/Faceset")
 
 [node name="Background" type="ColorRect" parent="." unique_id=320313124]
 layout_mode = 1
@@ -72,7 +81,6 @@ size_flags_horizontal = 3
 
 [node name="Name" type="Label" parent="Background/Hcontainer/Vcontainer" unique_id=2136589128]
 layout_mode = 2
-text = "Prefeito"
 label_settings = SubResource("LabelSettings_s3sii")
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -80,3 +88,21 @@ vertical_alignment = 1
 [node name="Dialog" type="RichTextLabel" parent="Background/Hcontainer/Vcontainer" unique_id=1887363676]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6)
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/normal_font = ExtResource("2_vyewl")
+theme_override_font_sizes/normal_font_size = 64
+
+[node name="ChoiceLabel" type="RichTextLabel" parent="Background/Hcontainer/Vcontainer" unique_id=1697202196]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6)
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/normal_font = ExtResource("2_vyewl")
+theme_override_font_sizes/normal_font_size = 64
+autowrap_mode = 2

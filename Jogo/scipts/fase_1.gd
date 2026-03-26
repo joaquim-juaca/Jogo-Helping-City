@@ -1,45 +1,82 @@
 extends Node2D
 
-var texture = preload("res://72eb903ee884f7c03d7fadd74616a457.jpg")
+@export var image_path: String = "res://72eb903ee884f7c03d7fadd74616a457.jpg"
+
+@export var rows: int = 4
+@export var cols: int = 4
 
 var total_pieces = 0
 var placed_pieces = 0
-var rows = 4
-var cols = 4
-var piece_size = 128
+
+@onready var pieces_node = $Pieces
+@onready var label = $UI/Label
 
 func _ready():
+	
 	create_pieces()
 
 func create_pieces():
-
+	
+	var texture = load(image_path)
+	
+	var piece_width = texture.get_width() / cols
+	var piece_height = texture.get_height() / rows
+	
+	total_pieces = rows * cols
+	
 	for y in range(rows):
+		
 		for x in range(cols):
-
-			var piece = Sprite2D.new()
-			piece.texture = texture
-
-			piece.region_enabled = true
-			piece.region_rect = Rect2(
-				x * piece_size,
-				y * piece_size,
-				piece_size,
-				piece_size
-			)
-
-			piece.position = Vector2(
-				randi() % 600,
-				randi() % 400
-			)
-
-			add_child(piece)
 			
-func piece_placed():
-	placed_pieces += 1
+			create_piece(texture, x, y, piece_width, piece_height)
 
-	if placed_pieces == total_pieces:
-		puzzle_completed()
+func create_piece(texture, x, y, piece_width, piece_height):
+	
+	var piece_scene = preload("res://scenes/PuzzlePiece.tscn")
+	
+	var piece = piece_scene.instantiate()
+	
+	var atlas = AtlasTexture.new()
+	
+	atlas.atlas = texture
+	
+	atlas.region = Rect2(
+		x * piece_width,
+		y * piece_height,
+		piece_width,
+		piece_height
+	)
+	
+	piece.get_node("Sprite2D").texture = atlas
+	
+	var target_pos = Vector2(
+		x * piece_width,
+		y * piece_height
+	)
+	
+	piece.target_position = target_pos
+	
+	# posição inicial aleatória
+	piece.position = Vector2(
+		randf_range(0, 600),
+		randf_range(0, 400)
+	)
+	
+	pieces_node.add_child(piece)
+
+func _process(delta):
+	
+	check_completion()
+
+func check_completion():
+	
+	var count = 0
+	
+	for piece in pieces_node.get_children():
 		
+		if piece.placed:
+			count += 1
+	
+	if count == total_pieces:
 		
-func puzzle_completed():
-	print("Puzzle completo!")
+		label.text = "Puzzle completo!"

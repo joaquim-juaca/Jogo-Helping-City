@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bckvnkkq6hwtg"]
+
+[ext_resource type="Script" uid="uid://r6bma1bjxim7" path="res://scipts/puzzle_manager.gd" id="1_i2mi1"]
+[ext_resource type="Texture2D" uid="uid://bvtptss6ik74r" path="res://72eb903ee884f7c03d7fadd74616a457.jpg" id="3_i2mi1"]
+
+[node name="Main" type="Node2D" unique_id=858758829]
+
+[node name="PuzzleManager" type="Node" parent="." unique_id=1914462312]
+script = ExtResource("1_i2mi1")
+
+[node name="PuzzleBoard" type="ColorRect" parent="." unique_id=2046402272]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=593786329]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1207834252]
+
+[node name="PuzzleImage" type="TextureRect" parent="UI" unique_id=51195968]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_i2mi1")
+
+[node name="Instructions" type="Label" parent="UI" unique_id=1427087908]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ResetButton" type="Button" parent="UI" unique_id=1088513528]
+custom_minimum_size = Vector2(50, 100)
+offset_right = 8.0
+offset_bottom = 8.0
+text = "🔄 Reset Puzzle"
+
+[node name="CompleteLabel" type="Label" parent="UI" unique_id=661743471]
+visible = false
+custom_minimum_size = Vector2(50, 150)
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PiecesContainer" type="Node2D" parent="." unique_id=388183592]

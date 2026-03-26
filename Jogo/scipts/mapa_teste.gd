@@ -75,7 +75,7 @@ func _on_area_2d_2_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 		and event.pressed \
 		and event.button_index == MOUSE_BUTTON_LEFT:
 		
-			get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+			get_tree().change_scene_to_file("res://scenes/Fase1.tscn")
 
 func _on_area_2d_3_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 		if event is InputEventMouseButton \

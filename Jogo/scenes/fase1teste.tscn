@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://pqof8chjm2lh"]
+
+[ext_resource type="Script" uid="uid://oxcccctt4rs8" path="res://scipts/Fase1teste.gd" id="1_ucg5k"]
+[ext_resource type="Texture2D" uid="uid://617wle12pvtf" path="res://sprites/233 Sem Título_20260312083903.png" id="2_6ddd7"]
+[ext_resource type="Script" uid="uid://bmcif2wnhvouc" path="res://scipts/peça_1.gd" id="3_y544s"]
+[ext_resource type="Script" uid="uid://xcthdgtslh14" path="res://scipts/encaixe_1.gd" id="4_6sfwa"]
+[ext_resource type="Texture2D" uid="uid://daj51wqmp3s0r" path="res://sprites/249 Sem Título_20260420231637.png" id="5_0uys2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rkhg3"]
+load_path = "res://.godot/imported/249 Sem Título_20260420231637.png-762b14f650b864a8d52e7232a03852a4.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcx2p"]
+atlas = SubResource("CompressedTexture2D_rkhg3")
+region = Rect2(384, 512, 256, 256)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mop41"]
+load_path = "res://.godot/imported/249 Sem Título_20260420231637.png-762b14f650b864a8d52e7232a03852a4.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rifb"]
+atlas = SubResource("CompressedTexture2D_mop41")
+region = Rect2(384, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkhg3"]
+atlas = ExtResource("5_0uys2")
+region = Rect2(384, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mop41"]
+atlas = ExtResource("5_0uys2")
+region = Rect2(384, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwyki"]
+atlas = ExtResource("5_0uys2")
+region = Rect2(384, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cwqn"]
+atlas = ExtResource("5_0uys2")
+region = Rect2(384, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4v7y"]
+atlas = ExtResource("5_0uys2")
+region = Rect2(640, 0, 320, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02lgw"]
+atlas = ExtResource("5_0uys2")
+region = Rect2(640, 0, 320, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhbnp"]
+atlas = ExtResource("5_0uys2")
+region = Rect2(640, 256, 320, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7yc2"]
+atlas = ExtResource("5_0uys2")
+region = Rect2(640, 256, 320, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khs5i"]
+atlas = ExtResource("5_0uys2")
+region = Rect2(640, 512, 320, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0igh4"]
+atlas = ExtResource("5_0uys2")
+region = Rect2(640, 512, 320, 256)
+
+[node name="Control" type="Control" unique_id=1190881007 node_paths=PackedStringArray("_hud")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ucg5k")
+_hud = NodePath("HUD")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1407617874]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6ddd7")
+
+[node name="Peça1" type="TextureRect" parent="Background" unique_id=1762086212]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 328.0
+offset_bottom = 384.0
+texture = SubResource("AtlasTexture_tcx2p")
+expand_mode = 1
+script = ExtResource("3_y544s")
+
+[node name="Encaixe1" type="TextureRect" parent="Background" unique_id=47603825]
+self_modulate = Color(1, 1, 1, 0.6784314)
+layout_mode = 1
+offset_left = 680.0
+offset_top = 576.0
+offset_right = 944.0
+offset_bottom = 832.0
+texture = SubResource("AtlasTexture_6rifb")
+expand_mode = 1
+script = ExtResource("4_6sfwa")
+
+[node name="Peça2" type="TextureRect" parent="Background" unique_id=511959198]
+layout_mode = 0
+offset_left = 1600.0
+offset_top = 448.0
+offset_right = 1864.0
+offset_bottom = 704.0
+texture = SubResource("AtlasTexture_rkhg3")
+expand_mode = 1
+script = ExtResource("3_y544s")
+
+[node name="Encaixe2" type="TextureRect" parent="Background" unique_id=34422329]
+self_modulate = Color(1, 1, 1, 0.6784314)
+layout_mode = 1
+offset_left = 680.0
+offset_top = 64.0
+offset_right = 944.0
+offset_bottom = 320.0
+texture = SubResource("AtlasTexture_mop41")
+expand_mode = 1
+script = ExtResource("4_6sfwa")
+
+[node name="Peça3" type="TextureRect" parent="Background" unique_id=1269987399]
+layout_mode = 0
+offset_left = 1600.0
+offset_top = 768.0
+offset_right = 1864.0
+offset_bottom = 1024.0
+texture = SubResource("AtlasTexture_kwyki")
+expand_mode = 1
+script = ExtResource("3_y544s")
+
+[node name="Encaixe3" type="TextureRect" parent="Background" unique_id=1396622174]
+self_modulate = Color(1, 1, 1, 0.6784314)
+layout_mode = 1
+offset_left = 680.0
+offset_top = 320.0
+offset_right = 944.0
+offset_bottom = 576.0
+texture = SubResource("AtlasTexture_2cwqn")
+expand_mode = 1
+script = ExtResource("4_6sfwa")
+
+[node name="Peça4" type="TextureRect" parent="Background" unique_id=116832504]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 768.0
+offset_right = 328.0
+offset_bottom = 1024.0
+texture = SubResource("AtlasTexture_k4v7y")
+expand_mode = 1
+script = ExtResource("3_y544s")
+
+[node name="Encaixe4" type="TextureRect" parent="Background" unique_id=446762880]
+self_modulate = Color(1, 1, 1, 0.6784314)
+layout_mode = 1
+offset_left = 944.0
+offset_top = 64.0
+offset_right = 1208.0
+offset_bottom = 320.0
+texture = SubResource("AtlasTexture_02lgw")
+expand_mode = 1
+script = ExtResource("4_6sfwa")
+
+[node name="Peça5" type="TextureRect" parent="Background" unique_id=2108240401]
+layout_mode = 0
+offset_left = 1600.0
+offset_top = 128.0
+offset_right = 1864.0
+offset_bottom = 384.0
+texture = SubResource("AtlasTexture_rhbnp")
+expand_mode = 1
+script = ExtResource("3_y544s")
+
+[node name="Encaixe5" type="TextureRect" parent="Background" unique_id=1182430943]
+self_modulate = Color(1, 1, 1, 0.6784314)
+layout_mode = 1
+offset_left = 944.0
+offset_top = 320.0
+offset_right = 1208.0
+offset_bottom = 576.0
+texture = SubResource("AtlasTexture_p7yc2")
+expand_mode = 1
+script = ExtResource("4_6sfwa")
+
+[node name="Peça6" type="TextureRect" parent="Background" unique_id=1421129617]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 328.0
+offset_bottom = 704.0
+texture = SubResource("AtlasTexture_khs5i")
+expand_mode = 1
+script = ExtResource("3_y544s")
+
+[node name="Encaixe6" type="TextureRect" parent="Background" unique_id=1762594524]
+self_modulate = Color(1, 1, 1, 0.6784314)
+layout_mode = 1
+offset_left = 944.0
+offset_top = 576.0
+offset_right = 1208.0
+offset_bottom = 832.0
+texture = SubResource("AtlasTexture_0igh4")
+expand_mode = 1
+script = ExtResource("4_6sfwa")
+
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=302523614]
+visible = false
+layout_mode = 0
+offset_left = 304.0
+offset_top = 40.0
+offset_right = 1584.0
+offset_bottom = 740.0
+texture = ExtResource("5_0uys2")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=730126102]
